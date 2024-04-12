@@ -2,7 +2,7 @@
 
 **Prerequisites**:
 1. **Snowflake Account**: Ensure you have sysadmin privileges, cool with someone who does, or if working in a DEV environment, have the necessary privileges to create a stage, image repository, and compute pool.
-2. **Docker**: Docker needs to be installed. Learn more about Docker and Snowpark containers [here](https://www.docker.com/get-started).
+2. **Docker**: Docker needs to be installed. Learn more about [Docker](https://www.docker.com/get-started) and [Snowpark Container Services](https://medium.com/snowflake/snowpark-container-services-a-tech-primer-99ff2ca8e741).
 3. **Visual Studio Code**: Install VS Code along with the Snowflake extension.
 
 ### Deployment Steps:
