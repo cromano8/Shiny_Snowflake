@@ -1,5 +1,8 @@
 # Shiny Apps Hosted with Snowflake
 
+### About this app:
+This example is the first Shiny app I ever deployed as part of my masters program many years ago and analyzes three plays by Shakespeare.  It is always fun looking back at old code especially since at that time I didn't even know what Snowflake was.
+
 **Prerequisites**:
 1. **Snowflake Account**: Ensure you have SYSADMIN privileges, cool with someone who does, or if working in a DEV environment, have the necessary privileges to create a stage, image repository, and compute pool.
 2. **Docker**: Docker needs to be installed. Learn more about [Docker](https://www.docker.com/get-started) and [Snowpark Container Services](https://medium.com/snowflake/snowpark-container-services-a-tech-primer-99ff2ca8e741).
@@ -94,5 +97,3 @@
 
 ![image](https://github.com/cromano8/Shiny_Snowflake/assets/59093254/939def4b-3339-4d27-adbf-9f310b16e6af)
 
-### About this app:
-This example uses a Shiny app that analyzes three plays by Shakespeare, a project that was the first Shiny App I ever deployed as part of my master's program many years ago.
