@@ -1,7 +1,7 @@
 # Shiny Apps Hosted with Snowflake
 
 ### About this app:
-This example is the first Shiny app I ever deployed as part of my masters program many years ago and analyzes three plays by Shakespeare.  It is always fun looking back at old code especially since at that time I didn't even know what Snowflake was.
+This example is the first Shiny app I ever deployed as part of my masters program many years ago and analyzes three plays by Shakespeare.  It's always fun looking back at old code especially when I am able to deploy it straight on Snowflake when back then I didn't even know what Snowflake was.
 
 **Prerequisites**:
 1. **Snowflake Account**: Ensure you have SYSADMIN privileges, cool with someone who does, or if working in a DEV environment, have the necessary privileges to create a stage, image repository, and compute pool.
