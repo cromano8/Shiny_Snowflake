@@ -1,14 +1,14 @@
 # Shiny Apps Hosted with Snowflake
 
 **Prerequisites**:
-1. **Snowflake Account**: Ensure you have sysadmin privileges, cool with someone who does, or if working in a DEV environment, have the necessary privileges to create a stage, image repository, and compute pool.
+1. **Snowflake Account**: Ensure you have SYSADMIN privileges, cool with someone who does, or if working in a DEV environment, have the necessary privileges to create a stage, image repository, and compute pool.
 2. **Docker**: Docker needs to be installed. Learn more about [Docker](https://www.docker.com/get-started) and [Snowpark Container Services](https://medium.com/snowflake/snowpark-container-services-a-tech-primer-99ff2ca8e741).
-3. **Visual Studio Code**: Install VS Code along with the Snowflake extension.
-
+3. **Visual Studio Code (optional)**: Install VS Code along with the Snowflake extension.
+   
 ### Deployment Steps:
 
 **Step 1: Set up infrastructure in Snowflake**
-- Log in using the Snowflake extension in VS Code. Select a database and schema and then proceed with the following:
+- Log in to Snowsight or use the Snowflake extension in VS Code. Select a database and schema and then proceed with the following:
   ```sql
   USE ROLE SYSADMIN;
   CREATE STAGE IF NOT EXISTS chase ENCRYPTION = (TYPE='SNOWFLAKE_SSE');
@@ -47,11 +47,11 @@
   ```
 
 **Step 4: Build and deploy the Docker image**
-- Log in to Docker and push the built image to Snowflake:
+- Log in to Docker and push the built image to Snowflake in a shell:
   ```bash
   docker login <account>.registry.snowflakecomputing.com
-  docker build --rm --platform linux/amd64 -t <your_account>.registry.snowflakecomputing.com/<database>/<schema>/images/shiny .
-  docker push <your_account>.registry.snowflakecomputing.com/<database>/<schema>/images/shiny
+  docker build --rm --platform linux/amd64 -t <account>.registry.snowflakecomputing.com/<database>/<schema>/images/shiny .
+  docker push <account>.registry.snowflakecomputing.com/<database>/<schema>/images/shiny
   ```
 
 **Step 5: Create the Service**
@@ -63,7 +63,7 @@
   spec:
     container:
     - name: shiny
-      image: sfpscogs-scs.registry.snowflakecomputing.com/cromano/demo/images/shiny
+      image: <account>.registry.snowflakecomputing.com/cromano/demo/images/shiny
       env:
         DISABLE_AUTH: true
     endpoint:
