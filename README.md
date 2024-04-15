@@ -66,7 +66,7 @@ This example is the first Shiny app I ever deployed as part of my masters progra
   spec:
     container:
     - name: shiny
-      image: <account>.registry.snowflakecomputing.com/cromano/demo/images/shiny
+      image: <account>.registry.snowflakecomputing.com/<database>/<schema>/images/shiny
       env:
         DISABLE_AUTH: true
     endpoint:
